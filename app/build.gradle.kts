@@ -7,6 +7,9 @@ android {
     namespace = "com.dexster.afairstation"
     compileSdk = 33
 
+    viewBinding{
+        enable=true
+    }
     defaultConfig {
         applicationId = "com.dexster.afairstation"
         minSdk = 24
