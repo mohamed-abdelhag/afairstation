@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dexster.afairstation.R
@@ -17,6 +18,7 @@ class ItemAdapter(private val context: Context, private val dataset: List<Affirm
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         // Define the TextView to display item titles.
         val textView: TextView = view.findViewById(R.id.item_title)
+        val imageView: ImageView = view.findViewById(R.id.item_image)
     }
 
     // Override onCreateViewHolder to inflate the layout for each item in the RecyclerView.
@@ -36,5 +38,6 @@ class ItemAdapter(private val context: Context, private val dataset: List<Affirm
 
         // Set the text of the TextView to the string resource specified in the item.
         holder.textView.text = context.resources.getString(item.stringResourceId)
+        holder.imageView.setImageResource(item.imageResourceId)
     }
 }
